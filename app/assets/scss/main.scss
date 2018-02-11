@@ -1,5 +1,5 @@
-$color: #262828;
+// Modules and Variables
+@import "modules/all";
 
-body {
-  color: $color;
-}
+// Partials
+@import "partials/base";
