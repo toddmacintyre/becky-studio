@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import img from '../assets/images/react_logo_512x512.png';
 
 const App = () => {
@@ -13,6 +14,12 @@ const App = () => {
         src={img}
         alt="React Logo"
       />
+      <div>
+        <Link to="/about">About</Link>
+      </div>
+      <div>
+        <Link to="/classes">Classes</Link>
+      </div>
     </div>
   );
 };
