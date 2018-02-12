@@ -1,25 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
-import img from '../assets/images/react_logo_512x512.png';
+import { Route } from 'react-router-dom';
+import Header from './Header';
+import Wave from './svg/Wave';
+import Home from './Home';
+import About from './About';
+import Classes from './Classes';
 
 const App = () => {
   return (
     <div>
-      <h2 id="heading">Hello there...</h2>
-      <img
-        className="image"
-        style={{ margin: '0.5em' }}
-        height="40"
-        width="40"
-        src={img}
-        alt="React Logo"
-      />
-      <div>
-        <Link to="/about">About</Link>
-      </div>
-      <div>
-        <Link to="/classes">Classes</Link>
-      </div>
+      <Header />
+      <Wave />
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/classes" component={Classes} />
     </div>
   );
 };

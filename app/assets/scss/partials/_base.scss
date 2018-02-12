@@ -1,3 +1,51 @@
+ html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: $color;
+  text-decoration: none;
+
+  // @include on-event {
+  //   color: $text-color;
+  //   text-decoration: underline;
+  // }
+}
+
 body {
-    color: $color;
+  color: $color;
+  width: 100%;
+}
+
+header {
+  background-color: #ffd700;
+  color: #000;
+
+  h1 {
+    font-size: 2em;
+    color: red;
   }
+}
+
+.wave-divider {
+  background-color: #ffd700;
+  position: relative;
+  height: 100px;
+  margin-bottom: 5px;
+
+  svg {
+    position: absolute;
+    bottom: -5px;
+    fill: #fff;
+  }
+}
+
+
