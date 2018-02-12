@@ -15,8 +15,10 @@
   },
   "rules": {
     "space-before-function-paren": "off",
-    "react/prefer-stateless-function": "warn",
+    "react/prefer-stateless-function": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/no-did-mount-set-state": "off",
+    "react/no-find-dom-node": "off",
     "linebreak-style": "off",
     "global-require": "off",
     "semi": "warn",

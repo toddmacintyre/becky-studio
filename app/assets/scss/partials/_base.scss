@@ -48,4 +48,11 @@ header {
   }
 }
 
+.loading {
+  opacity: .01;
+}
 
+.loaded {
+  opacity: 1;
+  transition: opacity 5s;
+}
