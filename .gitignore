@@ -1,7 +1,35 @@
-# npm
-node_modules
-npm-debug.log
+# OS specific
+.DS_Store
+
+# Dependency directories
+node_modules/
+
+# Exclude package-lock.json
 package-lock.json
 
-# vs code
-.vscode
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# Project specific
+coverage/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
