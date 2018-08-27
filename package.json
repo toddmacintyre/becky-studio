@@ -8,7 +8,7 @@
     "prepare": "webpack --env.prod -p --display=errors-only",
     "build": "webpack --env.prod -p",
     "build:dev": "webpack --env.dev",
-    "deploy": "git subtree push --prefix dist origin gh-pages",
+    "deploy": "echo 'make sure you've already built and commited the dist folder' && git subtree push --prefix dist origin gh-pages",
     "watch": "webpack --watch",
     "debug": "node --inspect --debug-brk node_modules/.bin/webpack --env.debug",
     "start": "webpack-dev-server",
