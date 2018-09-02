@@ -1,4 +1,5 @@
 import React from 'react';
+import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
 import '../styles/main.scss';
@@ -8,7 +9,6 @@ import Home from './Home';
 import About from './About';
 import Classes from './Classes';
 
-// TODO: add hot module reloading
 // TODO: add parallax: https://github.com/jscottsmith/react-scroll-parallax
 // TODO: add react router transitions: https://popmotion.io/pose/learn/route-transitions-reach-router/
 
@@ -18,7 +18,7 @@ const RoutesContainer = posed.div({
     delay: 300,
     beforeChildren: true,
   },
-  exit: { opacity: 0 }
+  exit: { opacity: 0 },
 });
 
 class App extends React.Component {
@@ -49,4 +49,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default hot(module)(App);

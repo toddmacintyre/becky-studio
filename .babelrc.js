@@ -1,6 +1,5 @@
 const isTest = String(process.env.NODE_ENV) === 'test';
 module.exports = {
-  babelrc: false,
   presets: [['babel-preset-env', {modules: isTest ? 'commonjs' : false}], 'babel-preset-react'],
   plugins: [
     'react-hot-loader/babel',

@@ -2,7 +2,7 @@ import React from 'react';
 import posed from 'react-pose';
 
 const Container = posed.div({
-  enter: { staggerChildren: 50 }
+  enter: { staggerChildren: 50 },
 });
 
 const P = posed.p({
