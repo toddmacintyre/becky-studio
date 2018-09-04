@@ -2,6 +2,7 @@ import 'regenerator-runtime/runtime';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter } from 'react-router-dom';
+import './styles/main.scss';
 import App from './components/App';
 
 const render = () => {

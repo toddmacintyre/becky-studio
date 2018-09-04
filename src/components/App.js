@@ -2,15 +2,14 @@ import React from 'react';
 import { hot } from 'react-hot-loader';
 import { Route, Switch } from 'react-router-dom';
 import posed, { PoseGroup } from 'react-pose';
-import '../styles/main.scss';
 import Header from './Header';
 import Wave from './svg/Wave';
 import Home from './Home';
 import About from './About';
 import Classes from './Classes';
+import withContainer from './withContainer';
 
-// TODO: add parallax: https://github.com/jscottsmith/react-scroll-parallax
-// TODO: add react router transitions: https://popmotion.io/pose/learn/route-transitions-reach-router/
+// TODO: add burger menu
 
 const RoutesContainer = posed.div({
   enter: {
@@ -28,19 +27,17 @@ class App extends React.Component {
         render={({ location }) => {
           return (
             <div id="site-container">
-              <div id="content-container">
-                <Header />
-                <Wave />
-                <PoseGroup>
-                  <RoutesContainer key={location.pathname}>
-                    <Switch location={location}>
-                      <Route exact path="/" component={Home} />
-                      <Route path="/about" component={About} />
-                      <Route path="/classes" component={Classes} />
-                    </Switch>
-                  </RoutesContainer>
-                </PoseGroup>
-              </div>
+              <Header />
+              <Wave />
+              <PoseGroup className="my-class">
+                <RoutesContainer key={location.pathname}>
+                  <Switch location={location}>
+                    <Route exact path="/" component={withContainer(Home)} />
+                    <Route path="/about" component={withContainer(About)} />
+                    <Route path="/classes" component={withContainer(Classes)} />
+                  </Switch>
+                </RoutesContainer>
+              </PoseGroup>
             </div>
           );
         }}
